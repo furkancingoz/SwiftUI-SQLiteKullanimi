@@ -22,7 +22,8 @@ struct ContentView: View {
                 
                 //kdao.sil(kisiler_id: 4)
                 
-                kdao.tumKisiler()
+               // kdao.tumKisiler()
+                kdao.getir(kisiler_id: 2)
             }
     }
     func veritabaniKopyala(){
