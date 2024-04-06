@@ -129,4 +129,20 @@ class KisilerDao{
         }
         db?.close()
     }
+    
+    func kontrol(kisi_adi : String) {
+        db?.open()
+        do{
+            let result = try db!.executeQuery("SELECT count(*) as sonuc FROM kisiler WHERE kisi_adi = ?  ", values: [kisi_adi] )
+            
+            while result.next() {
+                let sonuc = Int(result.string(forColumn: "sonuc"))!
+                print("--------------")
+                print("Sonuç:  \(sonuc)")
+            }
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
 }

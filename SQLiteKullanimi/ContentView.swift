@@ -22,7 +22,7 @@ struct ContentView: View {
                 // kdao.getir(kisiler_id: 2)
                 // kdao.arama(aramaKelimesi: "f")
                 // kdao.rastgele1KisiGetir()
-                
+                kdao.kontrol(kisi_adi: "Furkan")
             }
     }
     func veritabaniKopyala(){
