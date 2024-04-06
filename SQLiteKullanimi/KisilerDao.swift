@@ -108,4 +108,25 @@ class KisilerDao{
         }
         db?.close()
     }
+    
+    func rastgele1KisiGetir() {
+        db?.open()
+        do{
+            let result = try db!.executeQuery("SELECT * FROM kisiler ORDER BY RANDOM() LIMIT 1 ", values: nil )
+            
+            while result.next() {
+                let kisi_id = Int(result.string(forColumn: "kisiler_id"))!
+                let kisi_ad = result.string(forColumn: "kisi_adi")!
+                let kisi_tel = result.string(forColumn: "kisi_tel")!
+                
+                print("--------------")
+                print("Kişi ID: \(kisi_id)")
+                print("Kişi Adı: \(kisi_ad)")
+                print("Kişi Tel: \(kisi_tel)")
+            }
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
 }

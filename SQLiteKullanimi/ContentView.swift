@@ -15,16 +15,14 @@ struct ContentView: View {
                 let kdao = KisilerDao()
                 
                 // kdao.kaydet(kisi_adi: "Bora", kisi_tel: "1505")
-                
                 // kdao.guncelle(kisiler_id: 2, kisi_adi: "Sıla", kisi_tel: "3105")
-                
                 // kdao.guncelle(kisiler_id: 1, kisi_adi: "Furkan", kisi_tel: "0608")
-                
                 // kdao.sil(kisiler_id: 4)
-                
                 // kdao.tumKisiler()
                 // kdao.getir(kisiler_id: 2)
                 // kdao.arama(aramaKelimesi: "f")
+                // kdao.rastgele1KisiGetir()
+                
             }
     }
     func veritabaniKopyala(){
